@@ -1,0 +1,55 @@
+
+/* Inheritance*/
+
+/* Equal selectors, on the other hand exception if using !important */
+
+body {
+    border: 3px solid blue;
+    padding: 5px;
+    background-color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* TagName selector*/
+p {
+    color: brown;
+}
+
+/* ID selector */
+#page {
+    color: green;
+}
+
+/* Brother General Selector */
+h1 ~ h2 {
+    color: blue;
+}
+
+/* Ajacent Brother Selector*/
+h2 + h3 {
+    color: blueviolet;
+}
+
+/* Sibling Selector */
+div > p {
+    color: cadetblue;
+}
+
+/* Class selector */
+p.yellow {
+    color: yellow;
+}
+
+/* Heritage Selector */
+
+/* Specificity */
+* {
+    color: red;
+}
+
+p.green {
+    color: green;
+}
+/* if more specific selector exists then others, the rule specified will be launched 
+   (It will take precedence over more general rules)
+*/
