@@ -1,0 +1,49 @@
+/* Vertical navigation */
+
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav > ul a {
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px;
+    background: #ffb600 url(../img/menu.png) no-repeat left bottom;
+}
+
+a:hover {  /*, select a would be useful to deal with a programming language */
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+}
+
+ #home #navigation .home a,
+ #about #navigation .about a,
+ #services #navigation .services a,
+ #news #navigation .news a,
+ #contact #navigation .contact a {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;  
+}
+
+/* 
+ul {
+    border: 1px solid red;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+
+    padding: 5px 20px;
+    background: url(../img/seta.png) no-repeat left;
+} s*/
