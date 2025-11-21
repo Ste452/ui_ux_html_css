@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overwriting elements</title>
+  <style type="text/css">
+    .content1 {
+      border: 1px solid red;
+      background: orange;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      z-index: 3;
+    }
+
+    .content2 {
+      border: 1px solid red;
+      background: green;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      z-index: 2;
+    }
+
+    .content3 {
+      border: 1px solid red;
+      background: yellow;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 160px;
+      left: 160px;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content1">content1</div>
+
+  <div class="content2">content2</div>
+
+  <div class="content3">content3</div>
+</body>
+
+</html>

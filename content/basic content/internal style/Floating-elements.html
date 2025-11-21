@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>Elementos Flutuantes</title>
+
+    <style type="text/css">
+      .conteudo {
+        background: blue;
+        border: 1px solid gray;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        float: right;
+      }
+
+      .content-zero {
+        background: red;
+        border: 1px solid gray;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      #principal {
+        border: 5px solid red;
+        background: green;
+      }
+
+      /* .conteudo1 {
+		background: red;
+		border: 1px solid gray;
+		width: 200px;
+		height: 250px;
+		margin: 10px;
+		float: left;
+		} */
+    </style>
+  </head>
+
+  <body>
+    <div id="principal">
+      <div class="conteudo">Conteúdo 1</div>
+      <div class="conteudo">Conteúdo 2</div>
+      <div class="conteudo">Conteúdo 3</div>
+
+      <p class="clear">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu
+        mollis mi, ut placerat libero. Proin aliquam feugiat nisl, eu lobortis
+        mauris tempor vitae. Nunc ultrices dapibus ipsum, vitae malesuada ligula
+        fermentum sit amet. Maecenas hendrerit accumsan mauris, at venenatis dui
+        tempus vel. Cras pretium libero at nisi imperdiet vehicula. Vestibulum
+        at ornare tortor, rutrum posuere ex. Vivamus a euismod enim, a aliquam
+        eros. Vivamus aliquam justo eget metus efficitur, id posuere elit
+        rutrum. Etiam pulvinar eu magna vitae porttitor. Nulla lacinia pulvinar
+        libero. Proin dui mauris, laoreet dictum neque a, suscipit ultricies
+        purus. Sed consectetur gravida nisi ac tincidunt. Maecenas consectetur
+        sapien ex, in consequat sem volutpat vel. Nunc mattis, arcu id placerat
+        convallis, ligula erat consequat nibh, eget porta ex augue et orci.
+        Aenean blandit odio id elementum auctor. Morbi fermentum nunc vitae odio
+        dapibus tincidunt.
+      </p>
+    </div>
+
+    <div class="content-zero">Content 4</div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Static, Relative, Absolute and Fixed Positioning)</title>
+
+    <style text="text/css">
+      body {
+        background: #007fc7;
+      }
+
+      #container {
+        background: #fff;
+        width: 800px;
+        margin: 10px auto;
+        padding: 10px;
+      }
+
+      p {
+        width: 300px;
+      }
+
+      .relative {
+        border: 1px solid red;
+        position: relative;
+        /* top, right, bottom, left 
+      top: -20px;
+      left: -80px;*/
+        bottom: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>Posicionings:</h1>
+
+      <p>
+        P1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+        consequuntur iusto incidunt excepturi error, laborum mollitia
+        exercitationem quisquam doloribus nulla aliquid. Sunt, alias ex minima
+        quae in doloremque perspiciatis rerum!
+      </p>
+
+      <p class="relative">
+        P2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+        consequuntur iusto incidunt excepturi error, laborum mollitia
+        exercitationem quisquam doloribus nulla aliquid. Sunt, alias ex minima
+        quae in doloremque perspiciatis rerum!
+      </p>
+
+      <p>
+        P3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+        consequuntur iusto incidunt excepturi error, laborum mollitia
+        exercitationem quisquam doloribus nulla aliquid. Sunt, alias ex minima
+        quae in doloremque perspiciatis rerum!
+      </p>
+    </div>
+  </body>
+</html>
