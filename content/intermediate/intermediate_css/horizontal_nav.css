@@ -1,0 +1,42 @@
+
+/*  Horizontal Navigation Bar */
+nav > ul#navigation {
+    margin: 0; 
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    width: 720px;
+    background: #159cb0 url(../img/fundo-horizontal.png) repeat-x   ; 
+    float: left;
+}
+
+nav > ul#navigation li {
+    float: left;
+}
+
+nav > ul#navigation a {
+    display: block;
+    padding: 0 2em;
+    line-height: 2em;
+    text-decoration: none;
+    color: #fff;
+    background: url(../img/divisor.png) repeat-y right top;
+}
+
+nav > ul#navigation .first a {
+    background: none;
+}
+
+nav > ul#navigation a:hover {
+    color: #085662;
+    background: #44cade;
+}
+
+ #home ul#navigation .home a,
+ #about ul#navigation .about a,
+ #services ul#navigation .services a,
+ #news ul#navigation .news a,
+ #contact ul#navigation .contact a {
+    color: #085662;
+    background: #44cade;
+}
