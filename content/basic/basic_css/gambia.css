@@ -1,0 +1,25 @@
+body {
+    margin: auto;
+}
+
+body > div.red, div.blue {
+    margin-bottom: 20px;
+}
+
+.red {
+    background-color: red;
+    height: 200px;
+    width: 100%;
+}
+
+.blue {
+    background-color: blue;
+    height: 200px;
+    width: 100%;
+}
+
+.green {
+    background-color: green;
+    height: 200px;
+    width: 100%;
+}
