@@ -71,13 +71,25 @@ input::placeholder {
     padding: 6px 18px;
 }
 
+#group-links > .notice {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 145px;
+}
+
+#group-links > .notice a {
+    text-decoration: underline;
+}
+
 #addShortCut {
-    height: 55px;
+    height: 80px;
     width: auto;
     border: 2px solid black;
-    border-radius: 25px;
+    border-radius: 50%;
     background-color: rgb(18, 18, 24);
-    margin-top: 25px;
+    margin-top: 80px;
 }
 
 #addShortCut > a.button {
@@ -93,21 +105,20 @@ input::placeholder {
     color: azure;
     transition-duration: 300ms;
     transition-property: left, top;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-timing-function: 3ms;
     background-color: #454045;
+    overflow: hidden;
 }
 
 #addShortCut > a.button > span {
     display: flex;
     margin: auto;
+    padding-left: 30px;
+    padding-top: 20px;
     justify-content: center;
     align-items: center;
 }
 
-#addShortCut span {
-    border-radius: 25%;
-}
-
 #addShortCut > p {
-    margin-top: 20px;
+    margin-top: 45px;
 }
