@@ -30,15 +30,13 @@ input::placeholder {
 
 #group-links {
     display: flex;
-    text-align: -webkit-center;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
+    gap: 6px;
     margin-top: 20px;
     font-size: medium;
     font-weight: 600;
-    unicode-bidi: isolate;
 }
 
 #group-links div > a {
