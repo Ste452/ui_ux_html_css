@@ -1,46 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess a number</title>
-    <link rel="stylesheet" href="./style/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
     <header>
-       <h1>Guess a number</h3> 
-        <p></p>
+      <h1>Guess a number. <i>JavaScript Game</i></h1>
+      <p></p>
     </header>
 
+    <div id="imySideBar" class="sideNav">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" id="icloseBtn" onclick="closeNav()"
+            >&times;</a
+          >
+        </li>
+
+        <li>
+          <a href=""></a>
+        </li>
+        <li>
+          <a href=""></a>
+        </li>
+        <li>
+          <a href=""></a>
+        </li>
+        <li>
+          <a href=""></a>
+        </li>
+      </ul>
+    </div>
+
     <nav>
+      <div id="menu-icon" onclick="openNav()">&#9776;</div>
+      <div class="links">
         <ul>
-            <li>dsdsds</li>
-            <li>sdsdss</li>
-            <li>sdsds</li>
+          <li>
+            <a href=""></a>
+          </li>
+          <li>
+            <a href="">Reference</a>
+          </li>
+          <li>
+            <a href="">w3Resources</a>
+          </li>
+          <li>
+            <a href="">Other Games</a>
+          </li>
         </ul>
+      </div>
     </nav>
 
     <main>
-        <article>
-            <div>
-                <h2>Choose a number that are the correct one.</h2>
-                <hr>
-                <h3>Options bellow:</h3>
-                <button onclick="">dsdsdds</button>
-                <button onclick="">dsdsds</button>
-                <button onclick="">dsds</button>
-                <button onclick="">dsdssds</button>
-                <button onclick="">dsdsssds</button>
-            </div>
-            <div id="iasnwer">
-                
-            </div>
-        </article>
-        <section></section>
+      <article>
+        <div>
+          <h2>Choose a number that are the correct one.</h2>
+          <hr />
+          <h3>Options bellow:</h3>
+          <button onclick="">dsdsdds</button>
+          <button onclick="">dsdsds</button>
+          <button onclick="">dsds</button>
+          <button onclick="">dsdssds</button>
+          <button onclick="">dsdsssds</button>
+        </div>
+        <div id="iasnwer"></div>
+      </article>
+      <section></section>
     </main>
 
+    <footer>
+      <div></div>
+      <div></div>
+    </footer>
 
     <script src="./js/index.js"></script>
-</body>
+  </body>
 </html>
