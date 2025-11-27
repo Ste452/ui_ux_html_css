@@ -1,6 +1,6 @@
 body {
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: antiquewhite;
 }
 
@@ -13,9 +13,9 @@ body {
     padding: 20px;
     margin-right: auto;
     margin-left: auto;
-    border: 1px dotted rgb(50, 136, 122); 
-    background-color: rgb(183, 216, 238);
-    border-bottom: 10px inset rgb(73, 40, 77);
+    background-color: #ddebf8;
+    color: #2b2839;
+    border-bottom: 6px solid #d8cefe;
 }
 
 .border-blue {
@@ -27,6 +27,8 @@ body {
 }
 
 .avatar {
-    width: auto;
-    height: 185px;
+    width: 185px;
+    height: 205px;
+    border-radius: 20%;
+    image-rendering: optimizeQuality;
 }
