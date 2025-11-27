@@ -67,7 +67,7 @@ a {
     font-size: 18px;
 }
 
-.sideBar {
+.sideNav {
   height: 100%; /* Altura total do menu de navegação */
   width: 0; /* Largura inicial do menu de navegação */
   top: 0; /* Alinhamento ao topo da página */
@@ -83,13 +83,13 @@ a {
   transition: 0.5s;
 }
 
-.sideBar > a {
+.sideNav > a {
     padding: 22px 8px 8px 42px;
     text-decoration: none;
     font-size: 25px;
 }
 
-.sideBar div#icloseBtn {
+.sideNav div#icloseBtn {
     position: absolute;
     top:20;
     right: 35px;
