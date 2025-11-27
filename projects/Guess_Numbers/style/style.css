@@ -63,8 +63,8 @@ nav > div > ul li::selection {
 }
 
 a {
-    text-decoration: none;
-    font-size: 18px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .sideNav {
@@ -84,17 +84,17 @@ a {
 }
 
 .sideNav > a {
-    padding: 22px 8px 8px 42px;
-    text-decoration: none;
-    font-size: 25px;
+  padding: 22px 8px 8px 42px;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 .sideNav div#icloseBtn {
-    position: absolute;
-    top:20;
-    right: 35px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 20;
+  right: 35px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 main {
@@ -111,10 +111,36 @@ main > article {
   text-align: start;
 }
 
-main div > button {
-  height: 50px;
-  width: 4.5rem;
-  border-radius: 50%;
-  margin: 5px;
+main div > div.buttons div {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  width: 3.5rem;
+  border-radius: 10%;
+  background-color: aquamarine;
+  margin-top: 10px;
   padding: 5px;
+}
+
+.result-correct {
+  background-color: #4caf50 !important;
+  font-weight: bold;
+}
+
+.result-wrong {
+  background-color: #f44336 !important;
+  font-weight: bold;
+}
+
+.acertou {
+  background-color: #4caf50 !important; 
+  color: white;
+}
+
+.wrong {
+  background-color: #f44336;
+  color: white;
 }
