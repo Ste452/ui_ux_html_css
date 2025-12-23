@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+          Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Classes utilitárias - DRY */
+      .flex { display: flex; }
+      .flex-row { flex-direction: row; }
+      .flex-column { flex-direction: column; }
+      .flex-grow-1 { flex-grow: 1; }
+      .flex-grow-2 { flex-grow: 2; }
+      .flex-grow-3 { flex-grow: 3; }
+
+      /* Alinhamentos */
+      .items-center { align-items: center; }
+      .justify-between { justify-content: space-between; }
+      .justify-evenly { justify-content: space-evenly; }
+      .justify-flexStart { justify-content: flex-start; }
+      .justify-around { justify-content: space-around; }  
+      .justify-center { justify-content: center; }
+
+      /* Espaçamentos */
+      .gap-sm { gap: 10px; } 
+      .gap-md { gap: 20px; }
+      .gap-lg { gap: 40px; }
+
+      body {
+        background-color: #042326;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #3b3f40;
+      }
+
+      .btn {
+        display: flex;
+        border: 3px solid slategray;
+        border-radius: 15px;
+        background-color: black;
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+        padding: 10px 15px;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-delay: 1ms;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        opacity: 25%;
+        border: 3px solid whitesmoke;
+        background-color: #1d7373;
+      }
+
+      header {
+        width: 100%;
+        margin: auto;
+      }
+
+      header .header-top {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #1d7373;
+      }
+
+      header .title h1 {
+        color: aquamarine;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      header .title p {
+        font-size: 18px;
+        border-bottom: 5px inset #262626;
+        padding: 2.5px;
+        font-weight: bold;
+        color: aqua;
+      }
+
+      .logo {
+        position: relative;
+        width: 100px;
+        height: 100px;
+      }
+
+      header nav {
+        width: 100%;
+        background-color: #0f5959;
+      }
+
+      header nav .logo {
+        display: none;
+        gap: 15px;
+      }
+
+      header nav ul {
+        padding: 10px;
+      }
+
+      header nav li {
+        list-style-type: none;
+      }
+
+      header nav a {
+        text-decoration: none;
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        margin: 40px auto;
+        padding: 20px;
+        width: 60em;
+        background-color: #107361;
+      }
+
+      main article .writtenBy blockquote {
+        font-style: italic;
+        color: #a2fce6;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="flex justify-between flex-column items-center">
+      <div class="header-top flex items-center justify-around">
+        <div class="title flex flex-column justify-flexStart gap-sm">
+          <div>
+            <h1>Canva's Gallery</h1>
+          </div>
+          <div>
+            <p>
+              The best free stock photos, royalty free images & videos shared by
+              Steve.
+            </p>
+          </div>
+        </div>
+        <div>
+          <a href="https://canva.com" target="_blank">
+            <img
+              class="logo"
+              src="./img/canva-transparent-icon-free-png.png"
+              alt="Canva website"/>
+          </a>
+        </div>
+        <div class="flex gap-lg">
+          <a
+            class="btn"
+            href="https://accounts.google.com/v3/signin/accountchooser?access_type=offline&client_id=779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com&prompt=consent&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fgoogle&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=564edbf4-9d4e-4930-a379-9542186b0e23&dsh=S-1825564041%3A1765750515480573&o2v=2&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAO-u94LiZCtT7cIkz9GjVGQM7GZ7PZB9AfQ06rgsUk8HOoZgA9RYlLPMObepz9QmNp3OB_Qd5isIU-dk67QiMWQo6aboaGiMAXhaQfh9yxUjW6eAlioHhe_Pv_PBBWLOZ4KyazenZbGT_96wylIETPkvGQiRyFbvX7Xgon9Zqa00Xzoa6CkiouBOwoU7gxud6Uqq8-EHS3xMcD7WmvDK1qA4JDowuNZ2apLuJ8rEdyh6LFFtOXxqfKS2HvySkzA48KO-zyx91UMKZsqiqcwt9_ocomKf26aS7IxeJAZ2Vf4tKkvgs8srPW2L2HKAHDawCrXLCMFn_lLaSzjIhDNXJ88SjeHVqXFITT5r_eDuh0GB_DAUjhkY8N6PGKw1MgaqERr9DCn0HuOvaTXVN6aNKn42HiOG4GD45nxkyaJgPvG2NEsYUY8OjkX-zdF2MKn4_pUxO0mYTU7TYQWxVRQwCPMYReVeg%26flowName%3DGeneralOAuthFlow%26as%3DS-1825564041%253A1765750515480573%26client_id%3D779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fwww.canva.com"
+            >Join</a
+          >
+          <a
+            class="btn"
+            href="https://accounts.google.com/v3/signin/accountchooser?access_type=offline&client_id=779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com&prompt=consent&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fgoogle&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=564edbf4-9d4e-4930-a379-9542186b0e23&dsh=S-1825564041%3A1765750515480573&o2v=2&service=lso&flowName=GeneralOAuthFlow&opparams=%253F&continue=https%3A%2F%2Faccounts.google.com%2Fsignin%2Foauth%2Fconsent%3Fauthuser%3Dunknown%26part%3DAJi8hAO-u94LiZCtT7cIkz9GjVGQM7GZ7PZB9AfQ06rgsUk8HOoZgA9RYlLPMObepz9QmNp3OB_Qd5isIU-dk67QiMWQo6aboaGiMAXhaQfh9yxUjW6eAlioHhe_Pv_PBBWLOZ4KyazenZbGT_96wylIETPkvGQiRyFbvX7Xgon9Zqa00Xzoa6CkiouBOwoU7gxud6Uqq8-EHS3xMcD7WmvDK1qA4JDowuNZ2apLuJ8rEdyh6LFFtOXxqfKS2HvySkzA48KO-zyx91UMKZsqiqcwt9_ocomKf26aS7IxeJAZ2Vf4tKkvgs8srPW2L2HKAHDawCrXLCMFn_lLaSzjIhDNXJ88SjeHVqXFITT5r_eDuh0GB_DAUjhkY8N6PGKw1MgaqERr9DCn0HuOvaTXVN6aNKn42HiOG4GD45nxkyaJgPvG2NEsYUY8OjkX-zdF2MKn4_pUxO0mYTU7TYQWxVRQwCPMYReVeg%26flowName%3DGeneralOAuthFlow%26as%3DS-1825564041%253A1765750515480573%26client_id%3D779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com%26requestPath%3D%252Fsignin%252Foauth%252Fconsent%23&app_domain=https%3A%2F%2Fwww.canva.com"
+            >Sign-up</a
+          >
+        </div>
+      </div>
+      <nav class="flex justify-center items-center">
+        <div>
+          <a href="https://canva.com" title="Visit canva website">
+            <img
+              class="logo"
+              src="./img/canva-transparent-icon-free-png.png"
+              alt="Canva website"
+            />
+          </a>
+        </div>
+        <ul class="flex items-center justify-center gap-lg">
+          <li>
+            <a class="btn" href="https://www.pexels.com/" target="_blank"
+              >Pexels</a>
+          </li>
+          <li>
+            <a
+              class="btn"
+              href="https://www.freepik.com/free-photos-vectors/gallery"
+              target="_blank"
+              >Freepik</a
+            >
+          </li>
+          <li>
+            <a class="btn" href="https://www.ogimage.gallery/" target="_blank"
+              >Ogimage</a
+            >
+          </li>
+          <li>
+            <a
+              class="btn"
+              href="https://www.canva.com/photos/free/"
+              target="_blank"
+              >Canva photos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex flex-column justify-between gap-lg">
+      <article class="flex items-center justify-evenly">
+        <div class="container flex flex-row items-center gap-lg justify-between">
+          <div class="flex flex-column gap-sm flex-grow-1">
+            <div class="news-title">
+              <h1>Lorem ipsum</h1>
+            </div>
+            <div class="writtenBy">
+              <blockquote>By Steve</blockquote>
+            </div>
+          </div>
+          <div class="center-logo flex flex-row items-center justify-center flex-grow-1">
+            <div>
+              <a href="https://canva.com" target="_blank">
+                <img
+                  class="logo"
+                  src="./img/canva-transparent-icon-free-png.png"
+                  alt="Canva website"/>
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-row items-center justify-center flex-grow-1">
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+      </article>
+
+      <section id="image-gallery">
+        <div class="organizer">
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logo">
+        <img src="" alt="" />
+      </div>
+      <div class="link">
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+      <div class="social-media">
+        <a href="">
+          <img src="" alt="" />
+        </a>
+        <a href="">
+          <img src="" alt="" />
+        </a>
+        <a href="">
+          <img src="" alt="" />
+        </a>
+        <div class="references">
+          <h1></h1>
+          <ul>
+            <li>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href=""></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

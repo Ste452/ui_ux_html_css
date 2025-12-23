@@ -1,0 +1,72 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 25px;
+}
+
+#container {
+    width: 720px;
+    background-color: #fff;
+}
+
+#conteudo {
+    width: 520px;
+    padding: 10px;
+    background-color: #EBA759;
+    clear: both;
+    margin: auto;
+}
+
+#marca {
+    height: 100px;
+    background-color: #9E9E9E;
+    text-align: center;
+    line-height: 100px;
+    background-color: #EBDA5E;
+}
+
+#navegacao {
+    width: 180px;   
+    margin: auto 0;
+    float: left;
+}
+
+#navegacao ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#navegacao > ul a {
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px;
+    background: #ffb600 url(../../img/menu.png) no-repeat left bottom;
+}
+
+#navegacao > ul li a:hover {  /*, select a would be useful to deal with a programming language */
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+}
+
+#home #navegacao .home a, 
+#cadastro #navegacao .cadastro a, 
+#sobre_nos #navegacao .sobre_nos a, 
+#nossos_servicos #navegacao .nossos_servicos a, 
+#noticias #navegacao .noticias a {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+}
+
+#rodape {
+    clear: both;
+    background-color: #c4c4c4;
+    padding: 5px;
+    background-color: #E6FF73;
+}
